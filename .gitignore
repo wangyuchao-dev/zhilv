@@ -1,0 +1,45 @@
+# ==================== 密钥 ====================
+# 绝对不能提交。发项目给别人时，把 .env 排掉，只给 .env.example
+.env
+backend/.env
+*.env
+!.env.example
+
+# ==================== Python ====================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+.venv/
+venv/
+env/
+
+# ==================== 数据与向量库 ====================
+# Chroma 的 sqlite3 + bin 文件是本地索引，重新跑 ingest 脚本就能生成
+backend/db/
+*.db
+*.sqlite3
+
+# ==================== 前端 ====================
+node_modules/
+frontend/dist/
+frontend/.vite/
+npm-debug.log*
+
+# ==================== 临时产物 ====================
+_shot_*.png
+*.log
+.DS_Store
+Thumbs.db
+
+# ==================== IDE ====================
+.idea/
+.vscode/
+*.iml
+
+# 评测中间进度（每次跑覆盖，不进版本库）
+progress_*.json

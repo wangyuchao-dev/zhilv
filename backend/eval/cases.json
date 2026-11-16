@@ -1,0 +1,364 @@
+{
+  "version": "e2e-v1",
+  "note": "端到端用例：一个完整 PlanRequest 跑完生成链路，按「结构 / 内容 / 预算 / 质量」四类自动打分。日期取近 7 天内，天气 MCP 也能真实命中。",
+  "cases": [
+    {
+      "id": "e2e-01",
+      "name": "大连亲子两日",
+      "request": {
+        "user_name": "评测",
+        "age": 35,
+        "destination": "大连",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-21",
+        "days": 2,
+        "travelers": 3,
+        "budget": 5000,
+        "travel_style": [
+          "亲子",
+          "自然风景"
+        ],
+        "pace": "轻松",
+        "hotel_level": "舒适型"
+      },
+      "expect": {
+        "days": 2,
+        "must_include": [
+          "老虎滩",
+          "圣亚",
+          "滨海路"
+        ],
+        "must_avoid": [],
+        "budget_max": 5500
+      }
+    },
+    {
+      "id": "e2e-02",
+      "name": "成都美食三日",
+      "request": {
+        "user_name": "评测",
+        "age": 28,
+        "destination": "成都",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-22",
+        "days": 3,
+        "travelers": 2,
+        "budget": 4000,
+        "travel_style": [
+          "美食",
+          "休闲"
+        ],
+        "pace": "适中",
+        "hotel_level": "舒适型"
+      },
+      "expect": {
+        "days": 3,
+        "must_include": [
+          "宽窄巷子",
+          "锦里",
+          "春熙路"
+        ],
+        "must_avoid": [],
+        "budget_max": 4400
+      }
+    },
+    {
+      "id": "e2e-03",
+      "name": "西安历史两日",
+      "request": {
+        "user_name": "评测",
+        "age": 40,
+        "destination": "西安",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-21",
+        "days": 2,
+        "travelers": 2,
+        "budget": 3500,
+        "travel_style": [
+          "历史",
+          "古镇"
+        ],
+        "pace": "适中",
+        "hotel_level": "经济型"
+      },
+      "expect": {
+        "days": 2,
+        "must_include": [
+          "兵马俑",
+          "城墙",
+          "大雁塔"
+        ],
+        "must_avoid": [],
+        "budget_max": 3850
+      }
+    },
+    {
+      "id": "e2e-04",
+      "name": "厦门海岛三日",
+      "request": {
+        "user_name": "评测",
+        "age": 26,
+        "destination": "厦门",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-22",
+        "days": 3,
+        "travelers": 2,
+        "budget": 4500,
+        "travel_style": [
+          "自然风景",
+          "拍照"
+        ],
+        "pace": "轻松",
+        "hotel_level": "舒适型"
+      },
+      "expect": {
+        "days": 3,
+        "must_include": [
+          "鼓浪屿",
+          "环岛路",
+          "曾厝垵"
+        ],
+        "must_avoid": [],
+        "budget_max": 4950
+      }
+    },
+    {
+      "id": "e2e-05",
+      "name": "三亚度假四日",
+      "request": {
+        "user_name": "评测",
+        "age": 32,
+        "destination": "三亚",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-23",
+        "days": 4,
+        "travelers": 2,
+        "budget": 12000,
+        "travel_style": [
+          "休闲",
+          "自然风景"
+        ],
+        "pace": "轻松",
+        "hotel_level": "高档"
+      },
+      "expect": {
+        "days": 4,
+        "must_include": [
+          "亚龙湾",
+          "蜈支洲"
+        ],
+        "must_avoid": [],
+        "budget_max": 13200
+      }
+    },
+    {
+      "id": "e2e-06",
+      "name": "大理慢游三日",
+      "request": {
+        "user_name": "评测",
+        "age": 30,
+        "destination": "大理",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-22",
+        "days": 3,
+        "travelers": 1,
+        "budget": 3000,
+        "travel_style": [
+          "自然风景",
+          "拍照"
+        ],
+        "pace": "轻松",
+        "hotel_level": "经济型"
+      },
+      "expect": {
+        "days": 3,
+        "must_include": [
+          "古城",
+          "洱海",
+          "喜洲"
+        ],
+        "must_avoid": [],
+        "budget_max": 3300
+      }
+    },
+    {
+      "id": "e2e-07",
+      "name": "长沙吃货两日",
+      "request": {
+        "user_name": "评测",
+        "age": 24,
+        "destination": "长沙",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-21",
+        "days": 2,
+        "travelers": 2,
+        "budget": 2500,
+        "travel_style": [
+          "美食",
+          "夜生活"
+        ],
+        "pace": "紧凑",
+        "hotel_level": "经济型"
+      },
+      "expect": {
+        "days": 2,
+        "must_include": [
+          "橘子洲",
+          "岳麓山",
+          "太平老街"
+        ],
+        "must_avoid": [],
+        "budget_max": 2750
+      }
+    },
+    {
+      "id": "e2e-08",
+      "name": "成都一日极简（预算紧）",
+      "request": {
+        "user_name": "评测",
+        "age": 22,
+        "destination": "成都",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-20",
+        "days": 1,
+        "travelers": 1,
+        "budget": 600,
+        "travel_style": [
+          "休闲",
+          "古镇"
+        ],
+        "pace": "适中",
+        "hotel_level": "经济型"
+      },
+      "expect": {
+        "days": 1,
+        "must_include": [
+          "宽窄巷子",
+          "人民公园"
+        ],
+        "must_avoid": [],
+        "budget_max": 700
+      }
+    },
+    {
+      "id": "e2e-09",
+      "name": "三亚五日顶格（天数上限）",
+      "request": {
+        "user_name": "评测",
+        "age": 45,
+        "destination": "三亚",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-24",
+        "days": 5,
+        "travelers": 4,
+        "budget": 20000,
+        "travel_style": [
+          "休闲",
+          "亲子"
+        ],
+        "pace": "轻松",
+        "hotel_level": "高档"
+      },
+      "expect": {
+        "days": 5,
+        "must_include": [
+          "亚龙湾",
+          "亚特兰蒂斯"
+        ],
+        "must_avoid": [],
+        "budget_max": 22000
+      }
+    },
+    {
+      "id": "e2e-10",
+      "name": "西安避开人群",
+      "request": {
+        "user_name": "评测",
+        "age": 55,
+        "destination": "西安",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-21",
+        "days": 2,
+        "travelers": 2,
+        "budget": 4000,
+        "travel_style": [
+          "历史",
+          "休闲"
+        ],
+        "pace": "轻松",
+        "hotel_level": "舒适型",
+        "extra_request": "不想去回民街和大唐不夜城，人太多"
+      },
+      "expect": {
+        "days": 2,
+        "must_include": [
+          "城墙",
+          "陕西历史博物馆"
+        ],
+        "must_avoid": [
+          "回民街"
+        ],
+        "budget_max": 4400
+      }
+    },
+    {
+      "id": "e2e-11",
+      "name": "厦门紧凑三日（节奏测试）",
+      "request": {
+        "user_name": "评测",
+        "age": 29,
+        "destination": "厦门",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-22",
+        "days": 3,
+        "travelers": 2,
+        "budget": 5000,
+        "travel_style": [
+          "自然风景",
+          "古镇"
+        ],
+        "pace": "紧凑",
+        "hotel_level": "经济型"
+      },
+      "expect": {
+        "days": 3,
+        "must_include": [
+          "鼓浪屿",
+          "南普陀",
+          "集美"
+        ],
+        "must_avoid": [],
+        "budget_max": 5500
+      }
+    },
+    {
+      "id": "e2e-12",
+      "name": "大理高端四日",
+      "request": {
+        "user_name": "评测",
+        "age": 38,
+        "destination": "大理",
+        "start_date": "2026-11-20",
+        "end_date": "2026-11-23",
+        "days": 4,
+        "travelers": 2,
+        "budget": 15000,
+        "travel_style": [
+          "休闲",
+          "休闲"
+        ],
+        "pace": "轻松",
+        "hotel_level": "高档"
+      },
+      "expect": {
+        "days": 4,
+        "must_include": [
+          "洱海",
+          "双廊"
+        ],
+        "must_avoid": [],
+        "budget_max": 16500
+      }
+    }
+  ]
+}

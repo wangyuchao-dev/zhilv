@@ -1,0 +1,8 @@
+
+conda env list
+
+conda create -n zhilv python=3.12 -y
+
+conda activate zhilv
+
+pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple --timeout 300 --retries 10
